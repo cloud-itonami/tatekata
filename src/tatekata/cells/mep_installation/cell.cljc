@@ -26,7 +26,7 @@
     - Python \":…\"-free payload / mock-record string keys stay strings
     - transitions are pure fns returning {:cell-state … :next-node …}; the closed
       MepState surface + R0 solve gate → ex-info"
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 ;; ── MepPhase (enum — Python value identities preserved) ────────────
 
