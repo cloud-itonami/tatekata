@@ -10,7 +10,7 @@
   `transition_to_survey` is dead in cell.py (mapped to a method that is not a graph
   node). The run-chain reproduces the EXECUTED node sequence faithfully (survey is
   a no-op, so it is skipped)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def phases
   {:init "init" :survey "survey" :planning "planning" :execution "execution"

@@ -1,7 +1,7 @@
 (ns tatekata.methods.test-charter-gates
   "tatekata 建方 — constitutional-gate conformance tests. Substrate-native Clojure (ADR-2606160842); 1:1 port of pruned test_charter_gates.py."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.edn :as edn]))
 
 (def ^:private actor-dir (java.io.File. "."))
@@ -27,17 +27,17 @@
 ;; ── scope discipline: no high-rise, execution-only (no design), no cost estimation ──
 (deftest test-no-high-rise
   (let [n (nongoals)]
-    (is (or (str/includes? (str/lower-case (get n "N1")) "high-rise")
-            (str/includes? (str/lower-case (get n "N1")) "stories")) "N1 must exclude high-rise")))
+    (is (or (str/includes? (str/lower (get n "N1")) "high-rise")
+            (str/includes? (str/lower (get n "N1")) "stories")) "N1 must exclude high-rise")))
 
 (deftest test-execution-only-no-architectural-design
   (let [n (nongoals)]
-    (is (str/includes? (str/lower-case (get n "N9")) "design") "N9: tatekata is execution-only — no architectural design")))
+    (is (str/includes? (str/lower (get n "N9")) "design") "N9: tatekata is execution-only — no architectural design")))
 
 (deftest test-no-cost-estimation
   (let [n (nongoals)]
-    (is (or (str/includes? (str/lower-case (get n "N10")) "cost")
-            (str/includes? (str/lower-case (get n "N10")) "budget")) "N10: no cost estimation / budgeting (finance domain)")))
+    (is (or (str/includes? (str/lower (get n "N10")) "cost")
+            (str/includes? (str/lower (get n "N10")) "budget")) "N10: no cost estimation / budgeting (finance domain)")))
 
 ;; ── G3 witness quorum on progress/material/site records ──
 (deftest test-g3-witness-quorum
