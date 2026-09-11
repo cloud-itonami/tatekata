@@ -9,7 +9,7 @@ building-stock exposure + safe-site pre-designation to sonae; consumes igata col
 | Lexicons | ✅ 4 under `com.etzhayyim.tatekata.*` (siteAttestation / materialAttestation / constructionProgressRecord / safetyIncidentReport) |
 | Cells | 🟡 path-reserved (foundation → structural → MEP → finishing → commissioning, R0) |
 | Manifest | ✅ `manifest.edn` — constitutional gates + non-goals, machine-readable |
-| Tests | ✅ **51 green** — standalone CLJC actor, gate, cell, and Murakumo suites via `bb test` |
+| Tests | ✅ **51 green** — standalone CLJC actor, gate, cell, and Murakumo suites via `kbb -M:test` |
 | Methods | 🟡 agent present; offline construction engine = R1 |
 
 ## Charter gates pinned by the new charter-gate test
