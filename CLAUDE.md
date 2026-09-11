@@ -8,4 +8,4 @@
 - Do not reintroduce Go, TinyGo, shell launchers, Python parity ports, or former
   monorepo-relative paths.
 - Preserve every constitutional gate and non-goal in `manifest.edn`.
-- Run `bb test` before publishing changes.
+- Run `kbb -M:test` before publishing changes.

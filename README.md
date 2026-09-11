@@ -9,8 +9,8 @@ and kotoba seed state. Implementations live under `src/tatekata/`, tests under
 `test/tatekata/`, and generation tooling under `tools/`.
 
 ```bash
-bb test
-bb -m tatekata.kotoba.ingest-mcp --dry-run
+kbb -M:test
+kbb -m tatekata.kotoba.ingest-mcp --dry-run
 ```
 
 The constitutional gates preserve open firmware, IPFS-pinned site evidence,
